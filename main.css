@@ -111,12 +111,18 @@ button:focus{
     margin-top: var(--spacer-sm);
 }
 
+label{
+    text-align: right;
+    align-self: flex-end;
+}
+
 section{
     display: flex;
     width: inherit;
     padding: var(--spacer-lg) var(--spacer-sm) 0;
     justify-content: flex-start;
-    height: 80vh;
+    align-items: flex-start;
+    height: 70vh;
     color: var(--colors-black);
 }
 
