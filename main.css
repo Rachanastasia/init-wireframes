@@ -40,7 +40,7 @@ header{
     width: inherit;
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: flex-start;  
 }
 
 .header{
@@ -113,19 +113,16 @@ button:focus{
 
 section{
     display: flex;
-    flex-direction: column;
     width: inherit;
-    padding: var(--spacer-lg);
+    padding: var(--spacer-lg) var(--spacer-sm) 0;
     justify-content: flex-start;
     height: 80vh;
     color: var(--colors-black);
 }
+
 .hex-wrapper{
-    display: flex;
-    flex-direction: row;
     width: inherit;
     justify-content: space-between;
-
 }
 
 .p-wrapper{
@@ -171,6 +168,65 @@ section{
 .hexagon::after{
     top: 100%;
     border-top: 28.8px solid var(--colors-accent);
+}
+
+h1{
+    padding: var(--spacer-sm)
+}
+
+.hex-sm{
+    position: relative;
+   left: 80vw;
+   bottom: 45px;
+    width: 50px;
+    height: 28.5px;
+    background-color: var(--colors-accent);
+    margin: 14.4px auto;
+}
+
+
+
+.hex-sm::before,
+.hex-sm::after
+{
+    content: '';
+    position:absolute;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
+
+.hex-sm::before{
+    bottom: 100%;
+    border-bottom: 14.4px solid var(--colors-accent);
+}
+
+.hex-sm::after{
+    top: 100%;
+    border-top: 14.4px solid var(--colors-accent);
+}
+
+.unicode-hex{
+    font-size: 100px;
+    color: var(--colors-accent);
+}
+
+.unicode-hex-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacer-sm);
+    justify-content: center;
+    align-items: center;
+}
+
+.followers-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: inherit;
+
+}
+
+.unicode-hex-wrapper p {
+    padding: 0;
 }
 /*STYLES FOR FORM ELEMENTS*/
 form{
